@@ -5,7 +5,7 @@ coreos:
   etcd2:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=3
     # discovery: "https://discovery.etcd.io/<token>"
-    discovery: https://discovery.etcd.io/ef4cb99544c1905c54eedf2221877345
+    discovery: https://discovery.etcd.io/8807257f57150981856107613426dc37
     # multi-region and multi-cloud deployments need to use $public_ipv4
     advertise-client-urls: "http://$public_ipv4:2379"
     initial-advertise-peer-urls: "http://$private_ipv4:2380"
@@ -66,10 +66,13 @@ users:
       - sudo
       - docker
     ssh_authorized_keys:
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwmqZkwv4W2JXmOr1QcVkoWLEub1uFv7GYR31nYI9kcYvh7UKk5H2YcAQMZUIRQEdV9FfJFRccb/AOmrW/i6IyHNsdgAtcUNfsIafu9fT6ibhFn0ogwcaJ2FGOA+g2eO1Shl17w63ZEVaXoqjLgZXaaKsGj19oePlIAWs9YfycB4gnsnquuyB91R/NTA9jUpAdowoyAzTD65eyT9c4FtJGQ7qcLpT9/ncjT+0p7Ur1nRKnRy6P8B7G8OqJsOVLJ1n8jn8p8gDCiSMlTMindYhOF4MDqYsuVTUUhJdeOXZPH8HiOL+P09mkmG0AQ/gqHI8ywyyjsUcxgpmoOG68Fjl5 root@localhost"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoa7OBk6cooB35dVojY7uJAlzIiVxtZ4oIm4/oqxFqe3r85xll95/n6GLZ5pN3I3/aKxx7aBo+H3tKmHxm1f1Wj7gZFQUqQhEgDmnVJ+rQN+LMUVG5FaX0j9fNnSrWB2eHEcOETtpJf6JxvwFsebpGQMJ0x8WfzcdFZDgzWgrp5DPZ43UOaWjh4HOUt01qCb+7ovjp7d9OdukYWFa8rMWpATIHc7eRYSr5LELPCPkwtnAsvrh/pXDMp+5rDmOVBENMq8uch9rdWo00TJU6Iu5hpQ9O3sTwXRvU5l4J7RIjrHz8VtBsf4AdMv2s1Hpr/7zm4TgZ118gDMQaSoLgJvvL v-venchu@MININT-S7749TD"
+      #My windows sshkeys
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAh35coHFI2IzE0yBPNmTs5JX9oNVbDrX2VgyNm16E+jx46fIa5lhJWJkeTnZYwXxGVfas+qzDHDQL0+Mt+A8PORV0hOlsjIRj8e4C55eB/emsb2Srcj3TBJIxwMV2huJCa8sKMvHtYJ7LlgObRsUV1jGGO8HJmnGarR96YntVCt0hd1RzShhfUv9uWLKqQSoru0p67l30BubjW/ztMReCHu43+6CLzNiuAVCUPAreQEC2FCy3gAWTUxD07hYYY0SIhOEWkGWVDsgG9llK57irFobEvHx4NgYoPfK30NppAT4HEkAEeGSP+VQUv464TvuBPo3GWUEldDY7Lhvrmr8JCw=="
+      #- "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwmqZkwv4W2JXmOr1QcVkoWLEub1uFv7GYR31nYI9kcYvh7UKk5H2YcAQMZUIRQEdV9FfJFRccb/AOmrW/i6IyHNsdgAtcUNfsIafu9fT6ibhFn0ogwcaJ2FGOA+g2eO1Shl17w63ZEVaXoqjLgZXaaKsGj19oePlIAWs9YfycB4gnsnquuyB91R/NTA9jUpAdowoyAzTD65eyT9c4FtJGQ7qcLpT9/ncjT+0p7Ur1nRKnRy6P8B7G8OqJsOVLJ1n8jn8p8gDCiSMlTMindYhOF4MDqYsuVTUUhJdeOXZPH8HiOL+P09mkmG0AQ/gqHI8ywyyjsUcxgpmoOG68Fjl5 root@localhost"
+      #- "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoa7OBk6cooB35dVojY7uJAlzIiVxtZ4oIm4/oqxFqe3r85xll95/n6GLZ5pN3I3/aKxx7aBo+H3tKmHxm1f1Wj7gZFQUqQhEgDmnVJ+rQN+LMUVG5FaX0j9fNnSrWB2eHEcOETtpJf6JxvwFsebpGQMJ0x8WfzcdFZDgzWgrp5DPZ43UOaWjh4HOUt01qCb+7ovjp7d9OdukYWFa8rMWpATIHc7eRYSr5LELPCPkwtnAsvrh/pXDMp+5rDmOVBENMq8uch9rdWo00TJU6Iu5hpQ9O3sTwXRvU5l4J7RIjrHz8VtBsf4AdMv2s1Hpr/7zm4TgZ118gDMQaSoLgJvvL v-venchu@MININT-S7749TD"
   
   - name: coreos1
     ssh_authorized_keys:
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwmqZkwv4W2JXmOr1QcVkoWLEub1uFv7GYR31nYI9kcYvh7UKk5H2YcAQMZUIRQEdV9FfJFRccb/AOmrW/i6IyHNsdgAtcUNfsIafu9fT6ibhFn0ogwcaJ2FGOA+g2eO1Shl17w63ZEVaXoqjLgZXaaKsGj19oePlIAWs9YfycB4gnsnquuyB91R/NTA9jUpAdowoyAzTD65eyT9c4FtJGQ7qcLpT9/ncjT+0p7Ur1nRKnRy6P8B7G8OqJsOVLJ1n8jn8p8gDCiSMlTMindYhOF4MDqYsuVTUUhJdeOXZPH8HiOL+P09mkmG0AQ/gqHI8ywyyjsUcxgpmoOG68Fjl5 root@localhost"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoa7OBk6cooB35dVojY7uJAlzIiVxtZ4oIm4/oqxFqe3r85xll95/n6GLZ5pN3I3/aKxx7aBo+H3tKmHxm1f1Wj7gZFQUqQhEgDmnVJ+rQN+LMUVG5FaX0j9fNnSrWB2eHEcOETtpJf6JxvwFsebpGQMJ0x8WfzcdFZDgzWgrp5DPZ43UOaWjh4HOUt01qCb+7ovjp7d9OdukYWFa8rMWpATIHc7eRYSr5LELPCPkwtnAsvrh/pXDMp+5rDmOVBENMq8uch9rdWo00TJU6Iu5hpQ9O3sTwXRvU5l4J7RIjrHz8VtBsf4AdMv2s1Hpr/7zm4TgZ118gDMQaSoLgJvvL v-venchu@MININT-S7749TD"
+      #My windows sshkeys
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAh35coHFI2IzE0yBPNmTs5JX9oNVbDrX2VgyNm16E+jx46fIa5lhJWJkeTnZYwXxGVfas+qzDHDQL0+Mt+A8PORV0hOlsjIRj8e4C55eB/emsb2Srcj3TBJIxwMV2huJCa8sKMvHtYJ7LlgObRsUV1jGGO8HJmnGarR96YntVCt0hd1RzShhfUv9uWLKqQSoru0p67l30BubjW/ztMReCHu43+6CLzNiuAVCUPAreQEC2FCy3gAWTUxD07hYYY0SIhOEWkGWVDsgG9llK57irFobEvHx4NgYoPfK30NppAT4HEkAEeGSP+VQUv464TvuBPo3GWUEldDY7Lhvrmr8JCw=="      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwmqZkwv4W2JXmOr1QcVkoWLEub1uFv7GYR31nYI9kcYvh7UKk5H2YcAQMZUIRQEdV9FfJFRccb/AOmrW/i6IyHNsdgAtcUNfsIafu9fT6ibhFn0ogwcaJ2FGOA+g2eO1Shl17w63ZEVaXoqjLgZXaaKsGj19oePlIAWs9YfycB4gnsnquuyB91R/NTA9jUpAdowoyAzTD65eyT9c4FtJGQ7qcLpT9/ncjT+0p7Ur1nRKnRy6P8B7G8OqJsOVLJ1n8jn8p8gDCiSMlTMindYhOF4MDqYsuVTUUhJdeOXZPH8HiOL+P09mkmG0AQ/gqHI8ywyyjsUcxgpmoOG68Fjl5 root@localhost"
+      #- "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoa7OBk6cooB35dVojY7uJAlzIiVxtZ4oIm4/oqxFqe3r85xll95/n6GLZ5pN3I3/aKxx7aBo+H3tKmHxm1f1Wj7gZFQUqQhEgDmnVJ+rQN+LMUVG5FaX0j9fNnSrWB2eHEcOETtpJf6JxvwFsebpGQMJ0x8WfzcdFZDgzWgrp5DPZ43UOaWjh4HOUt01qCb+7ovjp7d9OdukYWFa8rMWpATIHc7eRYSr5LELPCPkwtnAsvrh/pXDMp+5rDmOVBENMq8uch9rdWo00TJU6Iu5hpQ9O3sTwXRvU5l4J7RIjrHz8VtBsf4AdMv2s1Hpr/7zm4TgZ118gDMQaSoLgJvvL v-venchu@MININT-S7749TD"
